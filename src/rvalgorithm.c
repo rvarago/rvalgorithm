@@ -3,7 +3,7 @@
 * @author rvarago
 */
 
-#include "rvalgorithm.h"
+#include "rvalgorithm/rvalgorithm.h"
 
 void
 foreach( const void *collection, size_t size, size_t nelems, processor_t processor )
