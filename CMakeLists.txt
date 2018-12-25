@@ -11,6 +11,8 @@ target_include_directories(${PROJECT_NAME}
 		include
 )
 
+target_compile_features(${PROJECT_NAME} PRIVATE c_std_11)
+
 enable_testing()
 add_subdirectory(3rdparty/googletest)
 add_subdirectory(test)
