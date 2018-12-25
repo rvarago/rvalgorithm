@@ -11,15 +11,11 @@ rv_foreach(const void *collection, size_t size, size_t nelems, processor_t proce
 }
 
 const void*
-rv_find(const void *collection, size_t size, size_t nelems, predicate_t pred)
+rv_find_n(const void *collection, size_t size, size_t n, predicate_t pred)
 {
-	const char *base = (const char *) collection;
-	int i = 0;
-	for(; i < nelems && pred(base) == 0; ++i) {
-		base += size;
-	}
-	
-	return i < nelems ? base : NULL;
+	const char *begin = (const char *) collection;
+	for(const void *end = rv_end(collection, size, n); begin != end && !pred(begin); begin += size) {}
+	return begin;
 }
 
 const void*
