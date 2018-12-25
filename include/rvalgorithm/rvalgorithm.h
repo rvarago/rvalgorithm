@@ -19,4 +19,10 @@ rv_foreach(const void *collection, size_t size, size_t nelems, processor_t proce
 const void*
 rv_find(const void *collection, size_t size, size_t nelems, predicate_t pred);
 
+/*
+ * @brief returns a pointer n positions after base, whose elements occupy size bytes.
+ */
+const void*
+rv_end(const void *begin, size_t size, size_t n);
+
 #endif

@@ -16,6 +16,15 @@ id_equals_20(const void *el)
 	return ((const struct person_t*) el)->id == 20;
 }
 
+TEST(rvalgorithm, end) {
+	const int ints[] = {1, 2, 3, 4};
+	EXPECT_EQ(3, *((const int*) rv_end(ints, sizeof(int), 2)));
+	EXPECT_EQ(ints + 4, rv_end(ints, sizeof(int), 4));
+
+	const char chars[] = {};
+	EXPECT_EQ(chars + 1, rv_end(chars, sizeof(char), 1));
+}
+
 TEST(rvalgorithm, find)
 {
 	const struct person_t arr[] = {{"P1", 10}, {"P2", 20}, {"P3", 30}, {"P4", 40}};
