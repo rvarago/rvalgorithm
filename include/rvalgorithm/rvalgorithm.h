@@ -1,5 +1,5 @@
-#ifndef ALGORITHM_H
-#define ALGORITHM_H
+#ifndef RVALGORITHM_H
+#define RVALGORITHM_H
 
 #include <stdlib.h>
 
