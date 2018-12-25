@@ -19,7 +19,7 @@ id_equals_20(const void *el)
 TEST(rvalgorithm, find)
 {
 	const struct person_t arr[] = {{"P1", 10}, {"P2", 20}, {"P3", 30}, {"P4", 40}};
-	const void *arr_f = find(arr, sizeof(struct person_t), 4, id_equals_20);
+	const void *arr_f = rv_find(arr, sizeof(struct person_t), 4, id_equals_20);
 	EXPECT_STREQ("P2", ((struct person_t*) arr_f)->name);
 }
 
