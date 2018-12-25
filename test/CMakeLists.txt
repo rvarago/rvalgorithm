@@ -1,5 +1,5 @@
 add_executable(rvalgorithm_test
-	rvalgorithm_test.cpp
+	algorithm_test.cpp
 	end_test.cpp
 	find_test.cpp
 )

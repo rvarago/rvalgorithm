@@ -1,4 +1,4 @@
-#include "rvalgorithm/rvalgorithm.h"
+#include "rvalgorithm/algorithm.h"
 
 void
 rv_foreach(const void *collection, size_t size, size_t nelems, processor_t processor)

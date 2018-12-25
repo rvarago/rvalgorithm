@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 project(rvalgorithm)
 
 add_library(${PROJECT_NAME}
-	src/rvalgorithm.c
+	src/algorithm.c
 	src/end.c
 	src/find.c
 )
