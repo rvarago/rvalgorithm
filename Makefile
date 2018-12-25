@@ -2,7 +2,7 @@
 
 BUILD_DIR = build
 
-all: mk gen compile
+all: compile gen mk
 
 test: all
 	cd $(BUILD_DIR) && ctest . 
@@ -10,7 +10,7 @@ test: all
 compile: gen
 	cd $(BUILD_DIR) && cmake --build .
 
-gen:
+gen: mk
 	cd $(BUILD_DIR) && cmake ..
 
 mk:
