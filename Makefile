@@ -2,7 +2,7 @@
 
 BUILD_DIR = build
 
-all: mk dep gen compile
+all: mk gen compile
 
 test: all
 	cd $(BUILD_DIR) && ctest . 
@@ -10,11 +10,8 @@ test: all
 compile: gen
 	cd $(BUILD_DIR) && cmake --build .
 
-gen: dep
+gen:
 	cd $(BUILD_DIR) && cmake ..
-
-dep: mk
-	cd $(BUILD_DIR) && conan install ..
 
 mk:
 	-mkdir -p $(BUILD_DIR)

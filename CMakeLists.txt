@@ -12,4 +12,5 @@ target_include_directories(${PROJECT_NAME}
 )
 
 enable_testing()
+add_subdirectory(3rdparty/googletest)
 add_subdirectory(test)
