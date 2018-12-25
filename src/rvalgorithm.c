@@ -1,8 +1,3 @@
-/*
-* rvalgorithm.c
-* @author rvarago
-*/
-
 #include "rvalgorithm/rvalgorithm.h"
 
 void
