@@ -4,6 +4,8 @@ project(rvalgorithm)
 
 add_library(${PROJECT_NAME}
 	src/rvalgorithm.c
+	src/end.c
+	src/find.c
 )
 
 target_include_directories(${PROJECT_NAME}
