@@ -1,8 +1,11 @@
-.PHONY: all mk gen compile test
+.PHONY: all mk gen compile test check
 
 BUILD_DIR = build
 
 all: compile gen mk
+
+check:
+	splint src/*.c -I./include
 
 test: all
 	cd $(BUILD_DIR) && ctest . 
